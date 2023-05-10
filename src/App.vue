@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <ContentCard></ContentCard>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ContentCard from './components/ContentCard.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ContentCard
   }
 }
 </script>
