@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap');
+
+/* color palette */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+
+    --light-cyan: #CEE3E9;
+    --neon-green: #53FFAA;
+    --blue-dark: #202733;
+    --gray-blue: #4F5D74;
+    --gray-blue-dark: #313A48;
+}
+
+/* semantic color variables */
+:root {
+    --color-bg: var(--blue-dark);
+    --color-card-bg: var(--gray-blue-dark);
+    --color-text: var(--light-cyan);
+    --color-accent-neon: var(--neon-green);
+    --color-accent-muted: var(--gray-blue);
+}
+
+/* typography */
+:root {
+    --font-family: 'Manrope', sans-serif;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 800;
+  
+    --font-size-xs: 13px;
+    --font-size-sm: 16px;
+    --font-size-md: 18px;
+    --font-size-lg: 28px;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+}
+
+/* default styles */
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xs);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+}
