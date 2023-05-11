@@ -1,9 +1,9 @@
 <template>
 <div class="card shadow">
-    <p class="card-label">Advice #</p>
-    <p class="card-quote">“It is easy to sit up and take notice, what's difficult is getting up and taking action.”</p>
+    <p class="card-label">Advice # {{quote.id}}</p>
+    <p class="card-quote">"{{quote.advice}}"</p>
     <div class="pattern"></div>
-    <div class="dice-wrap">
+    <div class="dice-wrap" @click="getQuote">
         <img class="dice" src="../assets/images/icon-dice.svg" alt="Click to switch quote">
     </div>
 </div>
@@ -11,7 +11,24 @@
 
 <script>
 export default {
-    name: 'ContentCard'
+    name: 'ContentCard',
+    data() {
+        return {
+            quote: []
+        }
+    },
+    methods: {
+        async getQuote() {
+            const res = await fetch('https://api.adviceslip.com/advice')
+            const data = await res.json()
+            this.quote = data.slip
+            console.log(this.quote.id)
+            console.log(this.quote.advice)
+        }
+    },
+    mounted() {
+        this.getQuote()
+    }
 }
 </script>
 
