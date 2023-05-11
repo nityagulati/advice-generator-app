@@ -48,7 +48,7 @@ You will find all the required assets in the `/images` folder. The assets are al
 ### Built with
 
 - [Vue.js](https://vuejs.org)
-- SCSS
+- [Vite](https://vitejs.dev) - Build tool
 - Flexbox
 - Mobile-first workflow
 
