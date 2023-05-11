@@ -1,7 +1,7 @@
 <template>
 <div class="card shadow">
     <div v-if="loading">
-        <loading class="loading"></loading>
+        <h1 class="loading">Loading...</h1>
     </div>
     <div v-else>
         <p class="card-label">Advice # {{quote.id}}</p>
@@ -15,13 +15,8 @@
 </template>
 
 <script>
-import loading from 'vue-loading-spinner/src/components/Circle7.vue'
-
 export default {
     name: 'ContentCard',
-    components: {
-        loading
-    },
     data() {
         return {
             quote: [],
