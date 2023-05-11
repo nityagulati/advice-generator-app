@@ -5,7 +5,7 @@
     </div>
     <div v-else>
         <p class="card-label">Advice # {{quote.id}}</p>
-        <p class="card-quote">"{{quote.advice}}"</p>
+        <h1 class="card-quote">"{{quote.advice}}"</h1>
     </div>
     <div class="pattern"></div>
     <div class="dice-wrap" @click="getQuote">
