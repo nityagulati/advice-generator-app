@@ -41,7 +41,7 @@ You will find all the required assets in the `/images` folder. The assets are al
 ### Links
 
 - Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/)
-- Live Site URL: [REST Countries API](https://nityagulati.github.io/advice-generator-app/)
+- Live Site URL: [Advice Generator App](https://nityagulati.github.io/advice-generator-app/)
 
 ## My process
 
