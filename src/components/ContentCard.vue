@@ -1,7 +1,7 @@
 <template>
 <div class="card shadow">
     <div v-if="loading">
-        <h1 class="loading">Loading...</h1>
+        <div class="loader"></div>
     </div>
     <div v-else>
         <p class="card-label">Advice # {{quote.id}}</p>
@@ -26,7 +26,7 @@ export default {
     methods: {
         async getQuote() {
             this.loading = true
-            const delay = (ms = 2000) => new Promise(r => setTimeout(r, ms))
+            const delay = (ms = 1000) => new Promise(r => setTimeout(r, ms))
             await delay()
             const res = await fetch('https://api.adviceslip.com/advice')
             const data = await res.json()
@@ -95,8 +95,19 @@ export default {
     transform: translateY(-50%);
 }
 
-.loading {
+.loader {
     margin-bottom: 30px;
+    border: 4px solid var(--light-cyan); 
+    border-top: 4px solid var(--color-accent-neon); 
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); } 
 }
 
 
