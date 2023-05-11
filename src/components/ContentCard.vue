@@ -1,7 +1,12 @@
 <template>
 <div class="card shadow">
-    <p class="card-label">Advice # {{quote.id}}</p>
-    <p class="card-quote">"{{quote.advice}}"</p>
+    <div v-if="loading">
+        <loading class="loading"></loading>
+    </div>
+    <div v-else>
+        <p class="card-label">Advice # {{quote.id}}</p>
+        <p class="card-quote">"{{quote.advice}}"</p>
+    </div>
     <div class="pattern"></div>
     <div class="dice-wrap" @click="getQuote">
         <img class="dice" src="../assets/images/icon-dice.svg" alt="Click to switch quote">
@@ -10,18 +15,28 @@
 </template>
 
 <script>
+import loading from 'vue-loading-spinner/src/components/Circle7.vue'
+
 export default {
     name: 'ContentCard',
+    components: {
+        loading
+    },
     data() {
         return {
-            quote: []
+            quote: [],
+            loading: true
         }
     },
     methods: {
         async getQuote() {
+            this.loading = true
+            const delay = (ms = 2000) => new Promise(r => setTimeout(r, ms))
+            await delay()
             const res = await fetch('https://api.adviceslip.com/advice')
             const data = await res.json()
             this.quote = data.slip
+            this.loading = false
             console.log(this.quote.id)
             console.log(this.quote.advice)
         }
@@ -83,6 +98,10 @@ export default {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.loading {
+    margin-bottom: 30px;
 }
 
 
