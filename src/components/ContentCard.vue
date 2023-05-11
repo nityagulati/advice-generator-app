@@ -37,7 +37,7 @@ export default {
     width: 250px;
     height: auto;
     min-height: 330px;
-    background: var(--color-card-bg);
+    background: var(--color-bg-card);
     border-radius: 15px;
     padding: 40px 14px;
     display: flex;

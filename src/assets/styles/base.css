@@ -15,7 +15,7 @@
 /* semantic color variables */
 :root {
     --color-bg: var(--blue-dark);
-    --color-card-bg: var(--gray-blue-dark);
+    --color-bg-card: var(--gray-blue-dark);
     --color-text: var(--light-cyan);
     --color-accent-neon: var(--neon-green);
     --color-accent-muted: var(--gray-blue);
