@@ -1,6 +1,6 @@
 <template>
-  <ContentCard role="main"></ContentCard>
-  <Footer role="footer"></Footer>
+  <ContentCard></ContentCard>
+  <Footer></Footer>
 </template>
 
 <script>
